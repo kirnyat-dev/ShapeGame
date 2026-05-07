@@ -15,19 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\PatternsPractice\Frames.h">
+    <ClInclude Include="Frames.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PatternsPractice\Sceen.h">
+    <ClInclude Include="Sceen.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PatternsPractice\SceenDirector.h">
+    <ClInclude Include="SceenDirector.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PatternsPractice\Toys.h">
+    <ClInclude Include="Toys.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\PatternsPractice\Form.h">
+    <ClInclude Include="Form.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

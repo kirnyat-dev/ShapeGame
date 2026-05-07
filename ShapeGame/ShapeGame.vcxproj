@@ -123,11 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\PatternsPractice\Form.h" />
-    <ClInclude Include="..\..\PatternsPractice\Frames.h" />
-    <ClInclude Include="..\..\PatternsPractice\Sceen.h" />
-    <ClInclude Include="..\..\PatternsPractice\SceenDirector.h" />
-    <ClInclude Include="..\..\PatternsPractice\Toys.h" />
+    <ClInclude Include="Form.h" />
+    <ClInclude Include="Frames.h" />
+    <ClInclude Include="Sceen.h" />
+    <ClInclude Include="SceenDirector.h" />
+    <ClInclude Include="Toys.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
