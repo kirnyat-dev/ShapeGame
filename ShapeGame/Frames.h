@@ -1,29 +1,27 @@
 #ifndef _FRAMES_H_
 #define _FRAMES_H_
 
-#include <string>
-#include <iostream>
 #include <memory>
-
-#include "Form.h"
+#include "ItemProperties.h"
 #include "Toys.h"
 
-class Frames {
+class Frames
+{
 public:
-	Frames(const Form& form) : form(std::make_unique<Form>(form)) {}
+    explicit Frames(std::unique_ptr<ItemProperties> props) : properties(std::move(props)) {}
 
-	bool IsSame(const Frames& other) {
-		return this == &other;
-	}
-	const Form& GetForm() const {
-		return *form;
-	}
-	bool IsPassable(const Toys& toy) const {
-		return form->IsEqual(toy.GetForm());
-	}
-	//void Collect(const Toys& toy); уместен для объекта который сможет хранить в себе игрушки
+    bool IsPassable(const Toys& toy, int propertiesCount) const
+    {
+        return properties->matches(toy.getProperties(), propertiesCount);
+    }
+
+    const ItemProperties& getProperties() const
+    {
+        return *properties;
+    }
+
 private:
-	std::unique_ptr<Form> form;
+    std::unique_ptr<ItemProperties> properties;
 };
 
-#endif //!_FRAMES_H_
+#endif

@@ -1,25 +1,21 @@
 #ifndef _TOYS_H_
 #define _TOYS_H_
 
-#include <string>
-#include <iostream>
 #include <memory>
+#include "ItemProperties.h"
 
-#include "Form.h"
-
-class Toys {
+class Toys
+{
 public:
-	Toys(const Form& form) : form(std::make_unique<Form>(form)) {}
-	
-	const Form& GetForm() const {
-		return *form;
-	}
-	bool IsSame(const Toys& other) const {
-		return this == &other;
-	}
+    explicit Toys(std::unique_ptr<ItemProperties> props) : properties(std::move(props)) {}
+
+    const ItemProperties& getProperties() const
+    {
+        return *properties;
+    }
+
 private:
-	std::string name;
-	std::unique_ptr<Form> form;
+    std::unique_ptr<ItemProperties> properties;
 };
 
-#endif //!_TOYS_H_
+#endif
